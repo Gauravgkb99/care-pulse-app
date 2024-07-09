@@ -17,7 +17,7 @@ import Image from "next/image"
 import { createAppointment, updateAppointment } from "@/lib/actions/appointment.actions"
 import { Appointment } from "@/types/appwrite.types"
 
-const AppointmentForms = ({userId, patientId, type, appointment, setOpen}: {userId: string, patientId: string, type: 'create' | 'cancel' | 'schedule', appointment?: Appointment, setOpen: (open: boolean) => void}) => {
+const AppointmentForms = ({userId, patientId, type, appointment, setOpen}: {userId: string, patientId: string, type: 'create' | 'cancel' | 'schedule', appointment?: Appointment, setOpen?: (open: boolean) => void}) => {
 
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
